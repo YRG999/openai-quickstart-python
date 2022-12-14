@@ -22,3 +22,30 @@ Some resources I found helpful.
 
 * https://stackoverflow.com/questions/38561881/how-do-i-turn-on-text-wrapping-by-default-in-vs-code
 * https://code.visualstudio.com/updates/v1_10#_editor
+
+## Open AI upgrade 3.5
+* https://beta.openai.com/docs/model-index-for-researchers
+```
+Models referred to as "GPT 3.5"
+GPT-3.5 series is a series of models that was trained on a blend of text and code from before Q4 2021. The following models are in the GPT-3.5 series:
+
+code-davinci-002 is a base model, so good for pure code-completion tasks
+text-davinci-002 is an InstructGPT model based on code-davinci-002
+text-davinci-003 is an improvement on text-davinci-002
+```
+* https://github.com/openai/openai-python
+```
+Command-line interface
+
+This library additionally provides an openai command-line utility which makes it easy to interact with the API from your terminal. Run openai api -h for usage.
+
+# list engines
+openai api engines.list
+
+# create a completion
+openai api completions.create -e ada -p "Hello world"
+
+# generate images via DALL·E API
+openai api image.create -p "two dogs playing chess, cartoon" -n 1
+```
+Run: `openai api engines.list` to list engines.
