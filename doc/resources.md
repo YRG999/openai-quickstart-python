@@ -18,6 +18,11 @@ Some resources I found helpful.
 * https://docs.python.org/3/tutorial/inputoutput.html
 * https://www.pythontutorial.net/python-basics/python-write-text-file/
 
+## Python comments
+
+* https://www.codecademy.com/forum_questions/505ba3cfc6addb000200e33c
+* https://peps.python.org/pep-0008/#block-commentspip
+
 ## VSCode
 
 * https://stackoverflow.com/questions/38561881/how-do-i-turn-on-text-wrapping-by-default-in-vs-code
