@@ -34,7 +34,7 @@ dt_str = str(date_time)
 print(response["choices"][0]["text"])
 
 # Append the predicted continuation to file
-f = open("demofile2.txt", "a")
+f = open("txt/demofile2.txt", "a")
 f.write("\n----------\nDate and time: ")
 f.write(dt_str)
 f.write("\n")

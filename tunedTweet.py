@@ -44,7 +44,7 @@ dt_str = str(date_time)
 print(response.choices[0].text)
 
 # Append to file
-f = open("demofile2.txt", "a")
+f = open("txt/demofile2.txt", "a")
 f.write("\n----------\nTWEET\n----------\n")
 f.write(dt_str)
 f.write("\n")

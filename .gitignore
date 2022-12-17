@@ -16,4 +16,6 @@ build/
 .DS_STORE
 
 .env
-demofile2.txt
+
+csv/
+txt/
