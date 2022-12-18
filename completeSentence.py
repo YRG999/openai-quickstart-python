@@ -33,9 +33,13 @@ dt_str = str(date_time)
 # Print the predicted continuation to console
 print(response["choices"][0]["text"])
 
+# create txt directory if it doesn't exist
+if not os.path.exists('txt'):
+   os.makedirs('txt')
+
 # Append the predicted continuation to file
-f = open("demofile2.txt", "a")
-f.write("\n----------\nDate and time: ")
+f = open("txt/demofile2.txt", "a")
+f.write("\n----complete sentence----\nDate and time: ")
 f.write(dt_str)
 f.write("\n")
 f.write("Temperature: ")
