@@ -58,7 +58,14 @@ openai api image.create -p "two dogs playing chess, cartoon" -n 1
 Run: `openai api engines.list` to list engines.
 
 ## Sentiment analysis
-* https://beta.openai.com/examples/default-adv-tweet-classifier
-* https://beta.openai.com/playground/p/default-adv-tweet-classifier?model=text-davinci-003
-* https://www.youtube.com/watch?v=uPKnSq6TaAk
-* https://github.com/mehranshakarami/AI_Spectrum/tree/main/2022/Sentiment_Analysis
+* The similest way to do this is to use OpenAI:
+  * Sample: https://beta.openai.com/examples/default-adv-tweet-classifier
+  * Playground: https://beta.openai.com/playground/p/default-adv-tweet-classifier?model=text-davinci-003
+* This was helpful, but went a different way:
+  * https://www.youtube.com/watch?v=uPKnSq6TaAk
+  * https://github.com/mehranshakarami/AI_Spectrum/tree/main/2022/Sentiment_Analysis
+* Not sure if needed to import, but did this anyway: [Install snscrape](https://pypi.org/project/snscrape/)
+* Dead ends
+  * [Install pytorch](https://pytorch.org/get-started/locally/#start-locally)
+  * [Install transformers](https://huggingface.co/transformers/v3.5.1/installation.html)
+  * [Install Textblob](https://pypi.org/project/textblob/)
