@@ -1,6 +1,6 @@
 # Readme
 
-There are 3 apps:
+Available apps:
 
 1. [Python example app](/doc/originalREADME.md) - follow these steps first to generate your virtual env with dependencies and put your OPENAI_API_KEY in an .env file and test your integration.
 2. `completeSentence.py` - completes your sentence when you add a prompt.
