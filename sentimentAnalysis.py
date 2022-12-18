@@ -7,6 +7,8 @@ from collections import Counter
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+search_term = "null"
+
 # create txt directory if it doesn't exist
 if not os.path.exists('txt'):
    os.makedirs('txt')
@@ -20,16 +22,38 @@ def processTweet (tweet):
     tweet_proc = ""
     for i in range(len(tweet)):
         tweet = tweet.replace(",", ". ", 1)
+        if tweet[0].isdigit():
+            tweet = "\n"+tweet
     for word in tweet.split(' '):
         if word.startswith('@') and len(word) > 1:
             word = '@user'
         elif word.startswith('\"@') and len(word) > 1:
             word = '\"@user'
         elif word.startswith('http'):
-            word = "http\n"
+            word = "http"
         tweet_words.append(word)
     tweet_proc = " ".join(tweet_words)
     return(tweet_proc)
+
+# def processTweet2 (tweet):
+#     tweet_words = []
+#     tweet_proc = ""
+#     for i in range(len(tweet)):
+#         # if a number is after @user or http, add a \n
+#         if tweet[i+4] == "r" and tweet[i+5].isdigit():
+#             try:
+#                 tweet = tweet[:i+4] + "\n" + tweet[i+5:]
+#             except IndexError:
+#                 pass
+#         elif tweet[i+3] == "p" and tweet[i+4].isdigit():
+#             try:
+#                 tweet = tweet[:i+3] + "\n" + tweet[i+4:]
+#             except IndexError:
+#                 pass
+#     for word in tweet.split(' '):
+#         tweet_words.append(word)
+#     tweet_proc = " ".join(tweet_words)
+#     return(tweet_proc)
 
 def count_words(s):
     # use a regular expression to find all the words in the string
@@ -44,6 +68,7 @@ def scrapeTweets():
     # User input
     tweet_file = "csv/"+input("Enter the name of the csv file to save tweets:\n")+".csv"
     max_num = int(input("Enter the number of tweets to scrape:\n"))
+    global search_term
     search_term = input("Enter the search term:\n(e.g. from:username since:2022-01-01 until:2022-12-01)\n")
 
     tweet_list = []
@@ -67,6 +92,7 @@ def sentimentAnalysis():
     with open(file, "r") as f:
         for line in f:
             line = processTweet(line)
+            # line = processTweet2(line)
             reader2 = reader2 + ''.join(line)
 
     # send to OpenAI and get sentiment analysis response
@@ -88,7 +114,8 @@ def sentimentAnalysis():
     # save the text of the response to a .txt file
     with open("txt/sentimentAnalysis.txt", "a") as f:
         f.write("\n----------\n")
-        f.write("File="+file+"\n")
+        f.write("Search term = "+search_term+"\n")
+        f.write("File = "+file+"\n")
         f.write(reader2)
         f.write(response_updated+"\n")
         f.write(str(response_word_count))
