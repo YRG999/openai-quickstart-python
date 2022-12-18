@@ -29,4 +29,6 @@ prompt,completion
 ,"@GovMikeHuckabee Authentication is important, but so is anonymity for many. A balance must be struck."
 ```
 
+---
+
 <a name="1">(1)</a> For some reason, I had 568 tweets, but trained only 563 of them. Not sure where 5 of them went.
