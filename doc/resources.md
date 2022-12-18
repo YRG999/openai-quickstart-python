@@ -18,10 +18,12 @@ Some resources I found helpful.
 * https://docs.python.org/3/tutorial/inputoutput.html
 * https://www.pythontutorial.net/python-basics/python-write-text-file/
 
-## Python comments
+## Python other
 
-* https://www.codecademy.com/forum_questions/505ba3cfc6addb000200e33c
-* https://peps.python.org/pep-0008/#block-commentspip
+* Comments
+  * https://www.codecademy.com/forum_questions/505ba3cfc6addb000200e33c
+  * https://peps.python.org/pep-0008/#block-commentspip
+* https://stackoverflow.com/questions/423379/using-global-variables-in-a-function
 
 ## VSCode
 
@@ -55,7 +57,7 @@ openai api image.create -p "two dogs playing chess, cartoon" -n 1
 ```
 Run: `openai api engines.list` to list engines.
 
-# Sentiment analysis
+## Sentiment analysis
 * https://beta.openai.com/examples/default-adv-tweet-classifier
 * https://beta.openai.com/playground/p/default-adv-tweet-classifier?model=text-davinci-003
 * https://www.youtube.com/watch?v=uPKnSq6TaAk
