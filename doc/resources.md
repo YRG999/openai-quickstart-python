@@ -54,3 +54,9 @@ openai api completions.create -e ada -p "Hello world"
 openai api image.create -p "two dogs playing chess, cartoon" -n 1
 ```
 Run: `openai api engines.list` to list engines.
+
+# Sentiment analysis
+* https://beta.openai.com/examples/default-adv-tweet-classifier
+* https://beta.openai.com/playground/p/default-adv-tweet-classifier?model=text-davinci-003
+* https://www.youtube.com/watch?v=uPKnSq6TaAk
+* https://github.com/mehranshakarami/AI_Spectrum/tree/main/2022/Sentiment_Analysis
