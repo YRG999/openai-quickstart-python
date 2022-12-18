@@ -117,8 +117,8 @@ def sentimentAnalysis():
         f.write("Search term = "+search_term+"\n")
         f.write("File = "+file+"\n")
         f.write(reader2)
-        f.write(response_updated+"\n")
-        f.write(str(response_word_count))
+        f.write("Sentiment:\n"+response_updated+"\n")
+        f.write("Total Sentiment:\n"+str(response_word_count))
 
 # User input: choose 1 or 2
 choice = input("Enter 1 for both or 2 for just sentiment analysis:\n")
@@ -129,3 +129,17 @@ elif choice == "2":
     sentimentAnalysis()
 else:
     print("Sorry, try again.")
+
+# remove empty lines from sentimentAnalysis.txt
+with open('txt/sentimentAnalysis.txt', 'r+') as file:
+    # Read all lines in the file
+    lines = file.readlines()
+    # Seek to the beginning of the file
+    file.seek(0)
+    # Iterate through all lines
+    for line in lines:
+        # If the line is not empty, write it to the file
+        if line.strip():
+            file.write(line)
+    # Truncate the file to remove any excess lines
+    file.truncate()

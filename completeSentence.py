@@ -54,3 +54,17 @@ f.write("\n")
 f.write("Response:\n")
 f.write(response["choices"][0]["text"])
 f.close()
+
+# remove empty lines from sentimentAnalysis.txt
+with open('txt/demofile2.txt', 'r+') as file:
+    # Read all lines in the file
+    lines = file.readlines()
+    # Seek to the beginning of the file
+    file.seek(0)
+    # Iterate through all lines
+    for line in lines:
+        # If the line is not empty, write it to the file
+        if line.strip():
+            file.write(line)
+    # Truncate the file to remove any excess lines
+    file.truncate()
