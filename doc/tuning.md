@@ -1,6 +1,6 @@
 # Fine tuning
 
-I fine tuned the openai babbage engine with 568 Tweets by Elon Musk from May 2022 and I've been playing around with it. 
+I fine tuned the openai babbage engine with 563 Tweets[(1)](#1) by Elon Musk from 4/30/22 - 5/31/22 and I've been playing around with it. 
 
 1. I grabbed the Tweets using [snscrape](https://github.com/JustAnotherArchivist/snscrape) as a Python library as described in [How to Scrape Tweets With snscrape](https://betterprogramming.pub/how-to-scrape-tweets-with-snscrape-90124ed006af) (see [Scraper](https://github.com/YRG999/Scraper) for my fork with a working example).
 
@@ -28,3 +28,5 @@ prompt,completion
 ,@pmarca Humans
 ,"@GovMikeHuckabee Authentication is important, but so is anonymity for many. A balance must be struck."
 ```
+
+<a name="1">(1)</a> For some reason, I had 568 tweets, but trained only 563 of them. Not sure where 5 of them went.
