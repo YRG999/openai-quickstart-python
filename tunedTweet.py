@@ -2,9 +2,13 @@ import os
 import openai
 import random
 import datetime
+from dotenv import load_dotenv
 
 # Generates a tweet based on tuned data (see readme for more)
 
+# Load the API key from the .env file
+load_dotenv()
+# Set up the API key so OpenAI can authenticate the request'
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def decideToken(choice):

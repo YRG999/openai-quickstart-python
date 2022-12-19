@@ -4,7 +4,11 @@ import snscrape.modules.twitter as sntwitter
 import pandas as pd
 import re
 from collections import Counter
+from dotenv import load_dotenv
 
+# Load the API key from the .env file
+load_dotenv()
+# Set up the API key so OpenAI can authenticate the request
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 search_term = "null"
@@ -117,7 +121,7 @@ def sentimentAnalysis():
         f.write("Search term = "+search_term+"\n")
         f.write("File = "+file+"\n")
         f.write(reader2)
-        f.write("Sentiment:\n"+response_updated+"\n")
+        f.write("\nSentiment:\n"+response_updated+"\n")
         f.write("Total Sentiment:\n"+str(response_word_count))
 
 # User input: choose 1 or 2
