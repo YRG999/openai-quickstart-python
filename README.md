@@ -18,11 +18,18 @@ Some things to try "A long time ago in a galaxy far, far away..." or "The quick 
 
 ## Activate venv
 
-Activate the virtual environment with:
+Create & activate new virtual environment
 
-```bash
-$ . venv/bin/activate
-```
+   ```bash
+   $ python -m venv venv
+   $ . venv/bin/activate
+   ```
+
+Install the requirements
+
+   ```bash
+   $ pip install -r requirements.txt
+   ```
 
 ## Run app
 
